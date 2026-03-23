@@ -17,6 +17,7 @@ RUN mkdir -p /var/glpi && chown -R www-data:www-data /var/glpi
 # Logos customizados
 COPY logo.png /var/www/glpi/public/pics/logo.png
 COPY logo-mini.png /var/www/glpi/public/pics/logo-mini.png
+COPY logo-collapsed.png /var/www/glpi/public/pics/logo-collapsed.png
 RUN chown www-data:www-data /var/www/glpi/public/pics/logo.png /var/www/glpi/public/pics/logo-mini.png
 
 COPY entrypoint-wrapper.sh /railway-entrypoint.sh
