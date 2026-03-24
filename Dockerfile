@@ -13,6 +13,8 @@ RUN rm -f /usr/lib/apache2/modules/mod_mpm_event.so \
     && (ln -sf /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf 2>/dev/null || true)
 
 RUN mkdir -p /var/glpi && chown -R www-data:www-data /var/glpi
+# Remover instalador por segurança
+RUN rm -f /var/www/glpi/install/install.php
 
 # Logos customizados
 COPY logo.png /var/www/glpi/public/pics/logo.png
